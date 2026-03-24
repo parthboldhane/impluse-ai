@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenSpend AI - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="popup-container">
+        <!-- Header -->
+        <header class="popup-header">
+            <div class="logo">
+                <span class="logo-icon">🧠</span>
+                <span class="logo-text">GenSpend AI</span>
+            </div>
+        </header>
+
+        <!-- Stats Overview -->
+        <section class="stats-overview">
+            <div class="stat-card total-saved">
+                <div class="stat-icon">💰</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="totalSaved">₹0</span>
+                    <span class="stat-label">Total Saved</span>
+                </div>
+            </div>
+            <div class="stat-card purchases-avoids">
+                <div class="stat-icon">🛒</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="avoidedCount">0</span>
+                    <span class="stat-label">Avoided</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Streak Section -->
+        <section class="streak-section">
+            <div class="streak-badge" id="streakBadge">
+                <span class="streak-flame">🔥</span>
+                <span class="streak-count" id="streakCount">0</span>
+                <span class="streak-label">Day Streak</span>
+            </div>
+            <div class="badge-container" id="badgeContainer">
+                <!-- Badges will be injected here -->
+            </div>
+        </section>
+
+        <!-- Income Settings -->
+        <section class="settings-section">
+            <h3>⚙️ Your Settings</h3>
+            <div class="input-group">
+                <label for="monthlyIncome">Monthly Income (₹)</label>
+                <input type="number" id="monthlyIncome" placeholder="50000" value="50000">
+                <button id="saveIncome">Save</button>
+            </div>
+            <p class="income-tip">This helps calculate how many hours of work your purchases cost!</p>
+        </section>
+
+        <!-- Weekly/Monthly Stats -->
+        <section class="period-stats">
+            <div class="period-card">
+                <h4>📅 This Week</h4>
+                <p class="period-value" id="weeklySaved">₹0</p>
+            </div>
+            <div class="period-card">
+                <h4>📆 This Month</h4>
+                <p class="period-value" id="monthlySaved">₹0</p>
+            </div>
+        </section>
+
+        <!-- Time Saved -->
+        <section class="time-saved-section">
+            <div class="time-card">
+                <span class="time-icon">⏰</span>
+                <span class="time-value" id="timeSaved">0</span>
+                <span class="time-label">Hours of work saved</span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="popup-footer">
+            <p>Made with ❤️ for mindful spending</p>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
