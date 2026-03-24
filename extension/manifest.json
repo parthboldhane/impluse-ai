@@ -1,0 +1,21 @@
+{
+  "name": "Impulse AI",
+  "description": "Prevents impulsive online spending",
+  "version": "1.0",
+  "manifest_version": 3,
+
+  "permissions": ["storage", "activeTab", "scripting"],
+
+  "host_permissions": ["<all_urls>"],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
